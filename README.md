@@ -1,4 +1,15 @@
-本 Python 程序（update_egg.py）是一个用于自动化修改和更新 OpenVPN Access Server (OpenVPN AS) 授权并发连接数的工具。
+本 Python 程序（update_egg.py）和（update_egg.sh）是功能完全一致的用于自动化修改和更新 OpenVPN Access Server (OpenVPN AS) 授权并发连接数的工具。根据自己的需要选择下载一个即可。
+
+程序需要环境具备 unzip/zip 可通过 sudo apt install zip 进行安装。
+
+update_egg.sh 文件上传后需要赋予执行权限
+
+chmod +x update_egg.sh
+sudo ./update_egg.sh
+
+
+update_egg.py 执行方式：
+sudo python3 update_egg.py
 
 主要功能与工作流程：
 路径确定与解压： 支持自定义 .egg 文件路径，默认自动读取 /usr/local/openvpn_as/lib/python/pyovpn-2.0-py3.12.egg，并将其解压至临时工作目录。如Docker部署，则可将相应的egg文件复制出来进行操作。
